@@ -4,8 +4,10 @@ import mate.academy.patterns.abstractFactory.AbstractFactory;
 import mate.academy.patterns.abstractFactory.Factory;
 import mate.academy.patterns.abstractFactory.train.Tarpan;
 import mate.academy.patterns.abstractFactory.train.Train;
-import mate.academy.patterns.adapter.AdapterJavaToDatabase;
+import mate.academy.patterns.adapter.AdapterJavaAppToCppApp;
+import mate.academy.patterns.adapter.CppApp;
 import mate.academy.patterns.adapter.Database;
+import mate.academy.patterns.adapter.JavaApp;
 import mate.academy.patterns.prototype.Human;
 import mate.academy.patterns.prototype.HumanFactory;
 
@@ -40,12 +42,11 @@ public class Main {
         System.out.println("--------------------------------------------");
 
         System.out.println("Adapter pattern : ");
-        Database database = new AdapterJavaToDatabase();
+        JavaApp javaApp = new JavaApp();
+        CppApp cppApp = new AdapterJavaAppToCppApp(javaApp);
 
-        database.insert();
-        database.select();
-        database.update();
-        database.delete();
+        cppApp.insert();
+        cppApp.delete();
 
         System.out.println("--------------------------------------------");
     }

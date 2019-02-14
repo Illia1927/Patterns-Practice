@@ -21,5 +21,4 @@ public class HyundaiRotem implements Train {
     public String getType() {
         return type;
     }
-
 }

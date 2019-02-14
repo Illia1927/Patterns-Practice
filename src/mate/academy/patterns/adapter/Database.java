@@ -1,11 +1,10 @@
 package mate.academy.patterns.adapter;
 
-public interface Database {
-    void insert();
+public class Database {
 
-    void update();
+    void insert(CppApp cppApp){
+    }
 
-    void delete();
-
-    void select();
+    void delete(CppApp cppApp){
+    }
 }

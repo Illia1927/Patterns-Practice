@@ -22,4 +22,3 @@ public class Human implements Copyable {
                 ", name : " + name + "}";
     }
 }
-
